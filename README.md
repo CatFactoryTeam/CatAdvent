@@ -1,4 +1,3 @@
-CatAdvent
-=========
+# CatAdvent
 
-An advent calendar managed by cats
+> An advent calendar managed by cats
