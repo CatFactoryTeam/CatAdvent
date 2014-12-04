@@ -1,5 +1,10 @@
-@(message: String)
+@(message: String, cats: List[Cat])
 
 @main("CatAdvent") {
   <h1>@message</h1>
+  <p>
+    @for(cat <- cats) {
+      <img src="@cat.link"/>
+    }
+  </p>
 }
