@@ -3,6 +3,8 @@ package controllers
 import play.api._
 import play.api.mvc._
 
+import java.util.Calendar
+
 import services.ImgurService
 
 /** CatAdvent main controller
@@ -14,8 +16,9 @@ object CatApp extends Controller {
     * Route: /
     */
   def index = Action {
-    val cats = ImgurService.cats
+    val now = Calendar.getInstance
+    val cats = ImgurService.calendar
 
-    Ok(views.html.index("Ready to work ! #catfactoryteam", cats))
+    Ok(views.html.index(cats, now.get(Calendar.DAY_OF_MONTH)))
   }
 }
