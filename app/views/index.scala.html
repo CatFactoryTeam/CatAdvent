@@ -1,5 +1,9 @@
-@(message: String)
+@(cats: Array[Cat], dayOfMonth: Int)
 
 @main("CatAdvent") {
-  <h1>@message</h1>
+  <h1>CatAdvent</h1>
+
+  @for(i <- 0 until dayOfMonth) {
+    <img src="@cats(i).link"/>
+  }
 }
